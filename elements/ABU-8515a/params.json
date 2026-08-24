@@ -1,0 +1,59 @@
+{
+    "add_is_visible": true,
+    "category": "input forms",
+    "default_dim": {
+        "height": 15,
+        "width": 15
+    },
+    "display": "Input - v1",
+    "fields": {
+        "ABP": {
+            "caption": "Input ID",
+            "editor": "DynamicValue",
+            "name": "id",
+            "rank": 0,
+            "value": "text"
+        },
+        "ABQ": {
+            "caption": "Campo",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "campo",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "ABR": {
+            "caption": "Campo 2",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "campo_2",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "ABS": {
+            "caption": "Campo 3",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "campo_3",
+            "optional": true,
+            "rank": 3,
+            "value": "number"
+        }
+    },
+    "icon": "ion-ios-list",
+    "property_applications": {
+        "resizable": true
+    },
+    "states": {
+        "ABT": {
+            "caption": "Itens Indexados",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "indexados",
+            "value": "number"
+        }
+    }
+}

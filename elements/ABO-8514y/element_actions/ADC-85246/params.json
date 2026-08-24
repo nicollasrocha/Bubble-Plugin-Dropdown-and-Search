@@ -1,0 +1,21 @@
+{
+    "caption": "definir",
+    "fields": {
+        "ADD": {
+            "caption": "registro",
+            "editor": "DynamicValue",
+            "name": "registro",
+            "optional": true,
+            "rank": 0,
+            "value": "custom_data_element_ABX"
+        },
+        "ADE": {
+            "caption": "texto",
+            "editor": "DynamicValue",
+            "name": "texto",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        }
+    }
+}

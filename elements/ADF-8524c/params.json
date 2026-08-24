@@ -1,0 +1,897 @@
+{
+    "add_hover_pressed": true,
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 150,
+        "width": 36
+    },
+    "display": "Slim",
+    "events": {
+        "ADh": {
+            "caption": "selecionado",
+            "name": "selecionado"
+        },
+        "ADi": {
+            "caption": "limpou",
+            "name": "limpou"
+        },
+        "ADj": {
+            "caption": "nada_encontrado",
+            "name": "nada_encontrado"
+        },
+        "ADk": {
+            "caption": "abriu",
+            "name": "abriu"
+        },
+        "ADl": {
+            "caption": "fechou",
+            "name": "fechou"
+        },
+        "AEu": {
+            "caption": "pedir_dados",
+            "name": "pedir_dados"
+        }
+    },
+    "fields": {
+        "ADG": {
+            "caption": "Tipo",
+            "doc": "\tTipo de dado da lista (ex.: Pet). Define os outros campos. Configure este primeiro.",
+            "editor": "custom_type",
+            "is_list": true,
+            "name": "tipo",
+            "optional": true,
+            "rank": 13
+        },
+        "ADH": {
+            "caption": "Rótulo",
+            "doc": "\tCampo que aparece como texto principal de cada item. Ex.: nome.",
+            "editor": "custom_field_ADG",
+            "field_list": false,
+            "field_type_restriction": "text_image_file",
+            "name": "rotulo",
+            "optional": true,
+            "rank": 17
+        },
+        "ADI": {
+            "caption": "Verificar",
+            "doc": "\tMesma busca do origem, terminando em :each item's unique id. Garante que as linhas extras pertencem ao registro certo. Obrigatório se usar linha_2/3/4.",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "verificar",
+            "optional": true,
+            "rank": 18,
+            "value": "text"
+        },
+        "ADJ": {
+            "caption": "Origem",
+            "doc": "\tA lista de registros que alimenta o dropdown. Ex.: Search for Pets.",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "origem",
+            "optional": true,
+            "rank": 16,
+            "value": "custom_data_ADG"
+        },
+        "ADK": {
+            "caption": "Valor inicial",
+            "doc": "Registro que já vem selecionado ao carregar. Deixe vazio para começar sem seleção.",
+            "editor": "DynamicValue",
+            "name": "item_inicial",
+            "optional": true,
+            "rank": 19,
+            "value": "custom_data_ADG"
+        },
+        "ADM": {
+            "caption": "Busca 2",
+            "doc": "Informação adicional de cada item. Aparece na lista E entra na busca — digitar o nome do tutor encontra o animal. Exige o campo verificar preenchido.",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "linha_2",
+            "optional": true,
+            "rank": 20,
+            "value": "text"
+        },
+        "ADN": {
+            "caption": "Prefixo 2",
+            "doc": "Texto antes do valor. Ex.: \"Tutor - \". Só exibição: não entra na busca.",
+            "editor": "StaticText",
+            "in_style": true,
+            "name": "prefixo_2",
+            "optional": true,
+            "rank": 21
+        },
+        "ADO": {
+            "caption": "Sulfixo 2",
+            "default_val": "Mesma linha",
+            "doc": "pos_4\tMesma linha = ao lado do anterior. Linha nova = abaixo.",
+            "editor": "Dropdown",
+            "in_style": true,
+            "name": "pos_2",
+            "optional": true,
+            "options": "Mesma linha,Linha nova",
+            "rank": 22
+        },
+        "ADP": {
+            "caption": "Placeholder",
+            "default_val": "Selecione",
+            "doc": "Texto da caixa quando nada está selecionado. Padrão: Selecione.",
+            "editor": "StaticText",
+            "in_style": true,
+            "name": "placeholder",
+            "optional": true,
+            "rank": 1
+        },
+        "ADQ": {
+            "caption": "Placeholder na busca",
+            "default_val": "Buscar",
+            "doc": "Texto do campo de busca vazio. Padrão: Buscar.",
+            "editor": "StaticText",
+            "in_style": true,
+            "name": "placeholder_busca",
+            "optional": true,
+            "rank": 2
+        },
+        "ADR": {
+            "caption": "Texto para sem resultado",
+            "default_val": "Nenhum resultado",
+            "doc": "Mensagem quando a busca não encontra nada. Padrão: Nenhum resultado.",
+            "editor": "StaticText",
+            "in_style": true,
+            "name": "texto_sem_resultado",
+            "optional": true,
+            "rank": 3
+        },
+        "ADS": {
+            "caption": "Carregando...",
+            "default_val": "Carregando",
+            "doc": "Mensagem enquanto a lista carrega. Padrão: Carregando...",
+            "editor": "StaticText",
+            "in_style": true,
+            "name": "texto_carregando",
+            "optional": true,
+            "rank": 4
+        },
+        "ADT": {
+            "caption": "Texto mínimo",
+            "default_val": "\tDigite pelo menos {n} caracteres",
+            "doc": "Mensagem antes de atingir o mínimo de caracteres. Use {n} para o número.",
+            "editor": "StaticText",
+            "in_style": true,
+            "name": "texto_minimo",
+            "optional": true,
+            "rank": 5
+        },
+        "ADU": {
+            "caption": "Desabilitar",
+            "default_val": false,
+            "doc": "Bloqueia a interação com o elemento.",
+            "editor": "Checkbox",
+            "in_style": true,
+            "name": "desabilitado",
+            "rank": 0
+        },
+        "ADV": {
+            "caption": "Permitir limpar",
+            "default_val": true,
+            "doc": "Exibe o \"x\" para desfazer a seleção.",
+            "editor": "Checkbox",
+            "in_style": true,
+            "name": "permitir_limpar",
+            "rank": 7
+        },
+        "ADW": {
+            "caption": "Fecha ao escolher",
+            "default_val": true,
+            "doc": "Fecha o dropdown após escolher um item.",
+            "editor": "Checkbox",
+            "in_style": true,
+            "name": "fechar_ao_escolher",
+            "rank": 8
+        },
+        "ADX": {
+            "caption": "Tooltips",
+            "default_val": true,
+            "doc": "Mostra o texto completo do item ao passar o mouse. Útil quando os nomes são cortados.",
+            "editor": "Checkbox",
+            "in_style": true,
+            "name": "tooltips",
+            "rank": 9
+        },
+        "ADY": {
+            "caption": "Posição do conteúdo",
+            "default_val": "auto",
+            "doc": "Direção em que o dropdown abre. auto decide pelo espaço na tela.",
+            "editor": "Dropdown",
+            "in_style": true,
+            "name": "posicao_abertura",
+            "optional": false,
+            "options": "auto,up,down",
+            "rank": 10
+        },
+        "ADZ": {
+            "caption": "Abrir em modal",
+            "default_val": "mobile",
+            "doc": "\tmobile abre a lista como modal em telas pequenas. on força sempre, off nunca.",
+            "editor": "Dropdown",
+            "in_style": true,
+            "name": "modal",
+            "options": "mobile,on,off",
+            "rank": 11
+        },
+        "ADq": {
+            "caption": "Busca 3",
+            "doc": "Informação adicional de cada item. Aparece na lista E entra na busca — digitar o nome do tutor encontra o animal. Exige o campo verificar preenchido.",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "linha_3",
+            "optional": true,
+            "rank": 23,
+            "value": "text"
+        },
+        "ADr": {
+            "caption": "Prefixo 3",
+            "doc": "Texto antes do valor. Ex.: \"Tutor - \". Só exibição: não entra na busca.",
+            "editor": "StaticText",
+            "in_style": true,
+            "name": "prefixo_3",
+            "optional": true,
+            "rank": 24
+        },
+        "ADs": {
+            "caption": "Sulfixo 3",
+            "default_val": "Mesma linha",
+            "doc": "pos_4\tMesma linha = ao lado do anterior. Linha nova = abaixo.",
+            "editor": "Dropdown",
+            "in_style": true,
+            "name": "pos_3",
+            "optional": true,
+            "options": "Mesma linha,Linha nova",
+            "rank": 25
+        },
+        "ADt": {
+            "caption": "Busca 4",
+            "doc": "Informação adicional de cada item. Aparece na lista E entra na busca — digitar o nome do tutor encontra o animal. Exige o campo verificar preenchido.",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "linha_4",
+            "optional": true,
+            "rank": 26,
+            "value": "text"
+        },
+        "ADu": {
+            "caption": "Prefixo 4",
+            "doc": "Texto antes do valor. Ex.: \"Tutor - \". Só exibição: não entra na busca.",
+            "editor": "StaticText",
+            "in_style": true,
+            "name": "prefixo_4",
+            "optional": true,
+            "rank": 27
+        },
+        "ADv": {
+            "caption": "Sulfixo 4",
+            "default_val": "Mesma linha",
+            "doc": "pos_4\tMesma linha = ao lado do anterior. Linha nova = abaixo.",
+            "editor": "Dropdown",
+            "in_style": true,
+            "name": "pos_4",
+            "optional": true,
+            "options": "Mesma linha,Linha nova",
+            "rank": 28
+        },
+        "ADw": {
+            "caption": "Fuzzy",
+            "default_val": 0.2,
+            "doc": "Tolerância a erro de digitação, de 0 a 1. 0 desliga. Não se aplica a números nem a termos com menos de 4 letras. Padrão 0.2.",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "fuzzy",
+            "optional": false,
+            "rank": 29
+        },
+        "ADx": {
+            "caption": "Buscar no meio da palavra",
+            "default_val": true,
+            "doc": "Permite encontrar pelo meio da palavra (\"menico\" acha \"Domenico\"). Só age quando a busca normal não retorna nada.",
+            "editor": "Checkbox",
+            "in_style": true,
+            "name": "busca_no_meio",
+            "rank": 30
+        },
+        "ADy": {
+            "caption": "Destacar termo encontrado",
+            "default_val": true,
+            "doc": "Destaca em negrito o trecho encontrado. O destaque é literal: buscar \"joao\" acha \"João\" mas não pinta o trecho.",
+            "editor": "Checkbox",
+            "in_style": true,
+            "name": "destacar",
+            "rank": 31
+        },
+        "ADz": {
+            "caption": "Mostrar campo de busca",
+            "default_val": true,
+            "doc": "Exibe o campo de busca dentro do dropdown. Desligar com min_caracteres > 0 trava a lista.",
+            "editor": "Checkbox",
+            "in_style": true,
+            "name": "mostrar_busca",
+            "rank": 32
+        },
+        "AEA": {
+            "caption": "Focar busca ao abrir",
+            "default_val": true,
+            "doc": "Focar busca ao abrir",
+            "editor": "Checkbox",
+            "in_style": true,
+            "name": "focar_busca",
+            "rank": 33
+        },
+        "AEB": {
+            "caption": "Manter texto ao fechar",
+            "default_val": false,
+            "doc": "Espera em milissegundos antes de buscar enquanto o usuário digita. Padrão 200.",
+            "editor": "Checkbox",
+            "in_style": true,
+            "name": "manter_busca",
+            "rank": 34
+        },
+        "AEC": {
+            "caption": "Atraso da busca (ms)",
+            "default_val": 200,
+            "doc": "Atraso da busca (ms)",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "atraso",
+            "rank": 35
+        },
+        "AED": {
+            "caption": "Fonte",
+            "default_val": "Ubuntu",
+            "doc": "Nome da fonte. Vazio herda a fonte da página.",
+            "editor": "StaticText",
+            "in_style": true,
+            "name": "fonte",
+            "optional": true,
+            "rank": 38
+        },
+        "AEE": {
+            "caption": "Cor primária",
+            "doc": "Cor de foco e da barra de rolagem da lista. Para o hover dos itens use cor_hover.",
+            "editor": "Color",
+            "in_style": true,
+            "name": "cor_primaria",
+            "rank": 39
+        },
+        "AEF": {
+            "caption": "Cor dos textos secundários",
+            "doc": "Cor das linhas extras (raça, tutor).",
+            "editor": "Color",
+            "in_style": true,
+            "name": "cor_texto_secundario",
+            "optional": true,
+            "rank": 42
+        },
+        "AEG": {
+            "caption": "Cor do fundo",
+            "doc": "Fundo da caixa e da lista. Padrão branco.",
+            "editor": "Color",
+            "in_style": true,
+            "name": "cor_fundo",
+            "optional": true,
+            "rank": 40
+        },
+        "AEH": {
+            "caption": "Cor do texto principal",
+            "doc": "Cor do texto principal.",
+            "editor": "Color",
+            "in_style": true,
+            "name": "cor_texto",
+            "optional": true,
+            "rank": 41
+        },
+        "AEI": {
+            "caption": "Cor da borda",
+            "doc": "Cor da borda da caixa e da lista.",
+            "editor": "Color",
+            "in_style": true,
+            "name": "cor_borda",
+            "optional": true,
+            "rank": 43
+        },
+        "AEJ": {
+            "caption": "Cor do placeholder",
+            "doc": "Cor do texto quando nada está selecionado.",
+            "editor": "Color",
+            "in_style": true,
+            "name": "cor_placeholder",
+            "optional": true,
+            "rank": 46
+        },
+        "AEK": {
+            "caption": "Cor desabilitado",
+            "doc": "Cor quando o elemento está bloqueado.",
+            "editor": "Color",
+            "in_style": true,
+            "name": "cor_desabilitado",
+            "optional": true,
+            "rank": 47
+        },
+        "AEL": {
+            "caption": "Raio da borda",
+            "default_val": 10,
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "raio_borda",
+            "optional": true,
+            "rank": 48
+        },
+        "AEM": {
+            "caption": "Altura",
+            "default_val": 40,
+            "doc": "Altura mínima da caixa em px. Padrão 40.",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "altura",
+            "optional": true,
+            "rank": 49
+        },
+        "AEN": {
+            "caption": "Altura da lista",
+            "default_val": 340,
+            "doc": "Altura máxima do dropdown em px. Passando disso, rola. Padrão 340.",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "altura_lista",
+            "optional": true,
+            "rank": 50
+        },
+        "AEP": {
+            "caption": "Animação",
+            "default_val": "0,2",
+            "doc": "\tDuração da animação de abrir e fechar, em segundos. Padrão 0.2.",
+            "editor": "StaticText",
+            "in_style": true,
+            "name": "animacao",
+            "optional": true,
+            "rank": 51
+        },
+        "AEQ": {
+            "caption": "Largura borda da caixa",
+            "default_val": 1,
+            "doc": "Espessura da borda da caixa em px. Padrão 1.",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "borda_largura",
+            "optional": true,
+            "rank": 52
+        },
+        "AER": {
+            "caption": "Estilo borda da caixa",
+            "default_val": "solid",
+            "doc": "Estilo da borda. none remove.",
+            "editor": "Dropdown",
+            "name": "borda_estilo",
+            "optional": true,
+            "options": "solid,dashed,dotted,none",
+            "rank": 53
+        },
+        "AES": {
+            "caption": "Cor borda da caixa",
+            "default_val": "rgba(220,222,226,1)",
+            "doc": "Cor da borda da caixa",
+            "editor": "Color",
+            "in_style": true,
+            "name": "cor_borda",
+            "rank": 54
+        },
+        "AET": {
+            "caption": "Raio borda da caixa",
+            "default_val": 10,
+            "doc": "Arredondamento dos cantos da caixa. Padrão 8.",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "raio_borda",
+            "optional": true,
+            "rank": 55
+        },
+        "AEU": {
+            "caption": "Ícone",
+            "default_val": "fas fa-chevron-down",
+            "doc": "Classe Font Awesome da seta. Ex.: fas fa-chevron-down. Vazio mantém a seta padrão.",
+            "editor": "StaticText",
+            "in_style": true,
+            "name": "icone",
+            "optional": true,
+            "rank": 56
+        },
+        "AEV": {
+            "caption": "Ícone aberto",
+            "default_val": "fas fa-chevron-up",
+            "doc": "\tÍcone quando o dropdown está aberto. Se preenchido, substitui a rotação.",
+            "editor": "StaticText",
+            "in_style": true,
+            "name": "icone_aberto",
+            "optional": true,
+            "rank": 57
+        },
+        "AEW": {
+            "caption": "Girar ícone",
+            "default_val": true,
+            "doc": "Gira o ícone 180 graus ao abrir.",
+            "editor": "Checkbox",
+            "in_style": true,
+            "name": "girar_icone",
+            "rank": 58
+        },
+        "AEX": {
+            "caption": "Cor da seta",
+            "default_val": "rgba(220,222,226,1)",
+            "doc": "Cor da seta",
+            "editor": "Color",
+            "in_style": true,
+            "name": "cor_icone",
+            "optional": true,
+            "rank": 59
+        },
+        "AEY": {
+            "caption": "Tamanho seta",
+            "default_val": 14,
+            "doc": "Tamanho da seta em px",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "tamanho_icone",
+            "optional": true,
+            "rank": 60
+        },
+        "AEZ": {
+            "caption": "Raio da lista",
+            "default_val": 8,
+            "doc": "Arredondamento dos cantos do dropdown. Padrão 8.",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "raio_lista",
+            "optional": true,
+            "rank": 61
+        },
+        "AEa": {
+            "caption": "Padding vertical da caixa",
+            "default_val": 8,
+            "doc": "Espaço acima e abaixo do texto na caixa. Padrão 6.",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "padding_vertical",
+            "optional": true,
+            "rank": 62
+        },
+        "AEb": {
+            "caption": "Padding horizontal da caixa",
+            "default_val": 16,
+            "doc": "Espaço nas laterais da caixa.",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "padding_horizontal",
+            "optional": true,
+            "rank": 63
+        },
+        "AEc": {
+            "caption": "Tamanho principal",
+            "default_val": 14,
+            "doc": "Tamanho do texto principal em px. Padrão 15.",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "tamanho_principal",
+            "optional": true,
+            "rank": 64
+        },
+        "AEd": {
+            "caption": "Tamanho  secundário",
+            "default_val": 12,
+            "doc": "Tamanho das linhas extras em px. Padrão 13.",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "tamanho_secundario",
+            "optional": true,
+            "rank": 65
+        },
+        "AEe": {
+            "caption": "Peso texto principal",
+            "default_val": 400,
+            "doc": "Peso do texto principal (400, 500, 700). Padrão 500.",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "peso_principal",
+            "optional": true,
+            "rank": 66
+        },
+        "AEf": {
+            "caption": "Peso texto secundário",
+            "default_val": 300,
+            "doc": "Peso das linhas extras. Padrão 400",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "peso_secundario",
+            "optional": true,
+            "rank": 67
+        },
+        "AEg": {
+            "caption": "Padding vertical do item da lista",
+            "default_val": 8,
+            "doc": "Espaço acima e abaixo do texto de cada item. Padrão 8.",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "padding_item_v",
+            "optional": true,
+            "rank": 68
+        },
+        "AEh": {
+            "caption": "Padding horizontal do item da lista",
+            "default_val": 12,
+            "doc": "Espaço nas laterais de cada item. Padrão 12.",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "padding_item_h",
+            "optional": true,
+            "rank": 69
+        },
+        "AEi": {
+            "caption": "Espaço entre itens",
+            "default_val": 2,
+            "doc": "Distância entre um item e o próximo. Padrão 2.",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "espaco_entre_itens",
+            "optional": true,
+            "rank": 70
+        },
+        "AEk": {
+            "caption": "Altura mínima de cada item",
+            "default_val": 0,
+            "doc": "Altura mínima de cada item. Deixe vazio para crescer com o conteúdo.",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "altura_opcao",
+            "optional": true,
+            "rank": 71
+        },
+        "AEl": {
+            "caption": "Altura barra busca",
+            "default_val": 44,
+            "doc": "Altura da barra de busca em px. Padrão 44.",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "altura_busca",
+            "optional": true,
+            "rank": 72
+        },
+        "AEm": {
+            "caption": "Padding da busca",
+            "default_val": 6,
+            "doc": "\tEspaço entre o campo e as bordas da barra. Padrão 6",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "padding_busca",
+            "optional": true,
+            "rank": 73
+        },
+        "AEn": {
+            "caption": "Padding vertical busca",
+            "default_val": 8,
+            "doc": "Espaço acima e abaixo do texto digitado. Padrão 8.",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "padding_busca_v",
+            "optional": true,
+            "rank": 74
+        },
+        "AEo": {
+            "caption": "Padding horizontal busca",
+            "default_val": 10,
+            "doc": "\tEspaço nas laterais do texto digitado. Padrão 10.",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "padding_busca_h",
+            "optional": true,
+            "rank": 75
+        },
+        "AEp": {
+            "caption": "espaco_entre_linhas",
+            "default_val": 2,
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "espaco_entre_linhas",
+            "optional": true,
+            "rank": 76
+        },
+        "AEq": {
+            "caption": "Cor do hover",
+            "doc": "Fundo do item sob o mouse e do item selecionado.",
+            "editor": "Color",
+            "in_style": true,
+            "name": "cor_hover",
+            "optional": true,
+            "rank": 44
+        },
+        "AEr": {
+            "caption": "Cor de destaque",
+            "doc": "Cor do trecho encontrado na busca.",
+            "editor": "Color",
+            "in_style": true,
+            "name": "cor_destaque",
+            "optional": true,
+            "rank": 45
+        },
+        "AEs": {
+            "caption": "Mínimo para busca",
+            "default_val": 3,
+            "doc": "Mínimo de caracteres para carregar a lista. 0 = carrega com a página. Maior que 0 exige gatilho preenchido e mostrar_busca ligado. Adia a exibição, não o workload.",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "min_caracteres",
+            "optional": true,
+            "rank": 15
+        },
+        "AEt": {
+            "caption": "Gatilho de recarga",
+            "doc": "\tPreencha com o termo_busca deste elemento. Não é lido: só força o Bubble a reexecutar o elemento quando o termo muda. Obrigatório se min_caracteres > 0.",
+            "editor": "DynamicValue",
+            "name": "gatilho",
+            "optional": true,
+            "rank": 14,
+            "value": "text"
+        },
+        "AEw": {
+            "caption": "Ícone limpar (X)",
+            "default_val": "fas fa-times-circle",
+            "doc": "Classe Font Awesome do \"x\". Ex.: fas fa-times-circle. Vazio mantém o padrão.",
+            "editor": "StaticText",
+            "in_style": true,
+            "name": "icone_limpar",
+            "optional": true,
+            "rank": 77
+        },
+        "AEx": {
+            "caption": "Cor do X",
+            "default_val": "rgba(129,126,126,1)",
+            "doc": "Cor do \"x\".",
+            "editor": "Color",
+            "in_style": true,
+            "name": "cor_icone_limpar",
+            "optional": true,
+            "rank": 78
+        },
+        "AEy": {
+            "caption": "Tamanho do X",
+            "default_val": 12,
+            "doc": "Tamanho do \"x\" em px.",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "tamanho_icone_limpar",
+            "optional": true,
+            "rank": 79
+        },
+        "AEz": {
+            "caption": "Estilos Bubble",
+            "default_val": false,
+            "doc": "Marque se ativou as Bubble properties (Borders, Background, Padding, Font style). A caixa fica transparente e quem desenha é o Bubble. Sem isso ficam duas bordas. Vale só para a caixa fechada; a lista continua usando os campos abaixo.",
+            "editor": "Checkbox",
+            "in_style": true,
+            "name": "usar_estilo_do_bubble",
+            "rank": 36
+        },
+        "AFA": {
+            "caption": "Número item exibidos",
+            "default_val": 50,
+            "doc": "Máximo de itens exibidos por vez. 0 = sem limite. Listas grandes ficam lentas sem limite. Padrão 50.",
+            "editor": "StaticNumber",
+            "in_style": true,
+            "name": "max_lista",
+            "optional": true,
+            "rank": 6
+        },
+        "AFB": {
+            "caption": "Debug",
+            "default_val": false,
+            "doc": "Debug no console",
+            "editor": "Checkbox",
+            "in_style": true,
+            "name": "Debug",
+            "rank": 81
+        },
+        "AFC": {
+            "caption": "Título no modal",
+            "doc": "Título exibido no topo do modal.",
+            "editor": "StaticText",
+            "in_style": true,
+            "name": "titulo_modal",
+            "optional": true,
+            "rank": 12
+        },
+        "AFD": {
+            "caption": "Altura Automática",
+            "default_val": false,
+            "doc": "A caixa ocupa a altura definida no elemento. Desmarque para ela crescer conforme o conteúdo.",
+            "editor": "Checkbox",
+            "in_style": true,
+            "name": "altura_automatica",
+            "rank": 37
+        },
+        "AFE": {
+            "caption": "Posição da lista",
+            "default_val": "absolute",
+            "editor": "Dropdown",
+            "in_style": true,
+            "name": "posicao_conteudo",
+            "optional": true,
+            "options": "fixed,absolute",
+            "rank": 80
+        }
+    },
+    "icon": "ion-android-arrow-dropdown-circle",
+    "platform_type": "web",
+    "property_applications": {
+        "Background": true,
+        "Border": true,
+        "BoxShadow": true,
+        "Font": true,
+        "MinWidth": true,
+        "Padding": true,
+        "resizable": true
+    },
+    "states": {
+        "ADa": {
+            "caption": "valor_selecionado",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "valor_selecionado",
+            "value": "text"
+        },
+        "ADb": {
+            "caption": "id_selecionado",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "id_selecionado",
+            "value": "text"
+        },
+        "ADc": {
+            "caption": "item_selecionado",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "item_selecionado",
+            "value": "custom_data_ADG"
+        },
+        "ADd": {
+            "caption": "termo_busca",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "termo_busca",
+            "value": "text"
+        },
+        "ADe": {
+            "caption": "indexados",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "indexados",
+            "value": "number"
+        },
+        "ADf": {
+            "caption": "aberto",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "aberto",
+            "value": "boolean"
+        },
+        "ADg": {
+            "caption": "carregado",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "carregado",
+            "value": "boolean"
+        }
+    }
+}

@@ -1,0 +1,362 @@
+{
+    "add_is_visible": true,
+    "category": "input forms",
+    "default_dim": {
+        "height": 15,
+        "width": 15
+    },
+    "display": "Search - Minisearch",
+    "events": {
+        "ABW": {
+            "caption": "selecionado",
+            "doc": "selected",
+            "name": "selecionado"
+        },
+        "ABy": {
+            "caption": "nada_encontrado",
+            "doc": "zero results",
+            "name": "nada_encontrado"
+        },
+        "ABz": {
+            "caption": "limpou",
+            "doc": "Clean",
+            "name": "limpou"
+        }
+    },
+    "fields": {
+        "ABJ": {
+            "caption": "Input ID",
+            "editor": "DynamicValue",
+            "name": "id",
+            "rank": 0,
+            "value": "text"
+        },
+        "ABK": {
+            "caption": "Campo",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "campo",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "ABL": {
+            "caption": "Campo 2",
+            "doc": "",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "campo_2",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "ABM": {
+            "caption": "Campo 3",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "campo_3",
+            "optional": true,
+            "rank": 3,
+            "value": "text"
+        },
+        "ABX": {
+            "caption": "tipo",
+            "doc": "",
+            "editor": "custom_type",
+            "name": "tipo",
+            "optional": true,
+            "rank": 4
+        },
+        "ABY": {
+            "caption": "origem",
+            "doc": "Usar com \"tipo\"",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "origem",
+            "optional": true,
+            "rank": 5,
+            "value": "custom_data_ABX"
+        },
+        "ABZ": {
+            "caption": "rotulo",
+            "doc": "Usar com \"tipo\"",
+            "editor": "custom_field_ABX",
+            "field_type_restriction": "text_image_file",
+            "name": "rotulo",
+            "optional": true,
+            "rank": 7
+        },
+        "ABd": {
+            "caption": "linha_2",
+            "doc": "",
+            "editor": "DynamicValue",
+            "field_list": false,
+            "field_type_restriction": "text_image_file",
+            "is_list": true,
+            "long_text": false,
+            "name": "linha_2",
+            "optional": true,
+            "rank": 8,
+            "value": "text"
+        },
+        "ABe": {
+            "caption": "prefixo_2",
+            "doc": "",
+            "editor": "DynamicValue",
+            "is_list": false,
+            "long_text": true,
+            "name": "prefixo_2",
+            "optional": true,
+            "rank": 9,
+            "value": "text"
+        },
+        "ABh": {
+            "caption": "pos_2",
+            "default_val": "Mesma linha",
+            "editor": "Dropdown",
+            "name": "pos_2",
+            "optional": true,
+            "options": "Mesma linha,Linha nova",
+            "rank": 10
+        },
+        "ABi": {
+            "caption": "linha_3",
+            "doc": "",
+            "editor": "DynamicValue",
+            "field_list": false,
+            "field_type_restriction": "text_image_file",
+            "is_list": true,
+            "name": "linha_3",
+            "optional": true,
+            "rank": 11,
+            "value": "text"
+        },
+        "ABj": {
+            "caption": "prefixo_3",
+            "editor": "DynamicValue",
+            "long_text": true,
+            "name": "prefixo_3",
+            "optional": true,
+            "rank": 12,
+            "value": "text"
+        },
+        "ABk": {
+            "caption": "pos_3",
+            "default_val": "Mesma linha",
+            "editor": "Dropdown",
+            "name": "pos_3",
+            "optional": true,
+            "options": "Mesma linha,Linha nova",
+            "rank": 13
+        },
+        "ABl": {
+            "caption": "linha_4",
+            "doc": "",
+            "editor": "DynamicValue",
+            "field_type_restriction": "text_image_file",
+            "is_list": true,
+            "name": "linha_4",
+            "optional": true,
+            "rank": 14,
+            "value": "text"
+        },
+        "ABm": {
+            "caption": "prefixo_4",
+            "editor": "DynamicValue",
+            "long_text": true,
+            "name": "prefixo_4",
+            "optional": true,
+            "rank": 15,
+            "value": "text"
+        },
+        "ABn": {
+            "caption": "pos_4",
+            "default_val": "Mesma linha",
+            "editor": "Dropdown",
+            "name": "pos_4",
+            "optional": true,
+            "options": "Mesma linha,Linha nova",
+            "rank": 16
+        },
+        "ABo": {
+            "caption": "min_caracteres",
+            "default_val": 3,
+            "editor": "StaticNumber",
+            "name": "min_caracteres",
+            "optional": true,
+            "rank": 17
+        },
+        "ABr": {
+            "caption": "gatilho",
+            "doc": "Próprio elemento de busca",
+            "editor": "DynamicValue",
+            "name": "gatilho",
+            "rank": 20,
+            "value": "text"
+        },
+        "ABs": {
+            "caption": "fonte",
+            "default_val": "Ubuntu",
+            "editor": "StaticText",
+            "name": "fonte",
+            "optional": true,
+            "rank": 21
+        },
+        "ABt": {
+            "caption": "tamanho_principal",
+            "default_val": 14,
+            "doc": "",
+            "editor": "StaticNumber",
+            "name": "tamanho_principal",
+            "optional": true,
+            "rank": 22
+        },
+        "ABu": {
+            "caption": "peso_principal",
+            "default_val": "400",
+            "editor": "Dropdown",
+            "name": "peso_principal",
+            "optional": true,
+            "options": "300,400,500,600,700",
+            "rank": 23
+        },
+        "ABv": {
+            "caption": "tamanho_secundario",
+            "default_val": 12,
+            "doc": "",
+            "editor": "StaticNumber",
+            "name": "tamanho_secundario",
+            "optional": true,
+            "rank": 24
+        },
+        "ABw": {
+            "caption": "peso_secundario",
+            "default_val": "300",
+            "editor": "Dropdown",
+            "name": "peso_secundario",
+            "optional": true,
+            "options": "300,400,500,600,700",
+            "rank": 25
+        },
+        "ACA": {
+            "caption": "busca_no_meio",
+            "default_val": true,
+            "doc": "",
+            "editor": "Checkbox",
+            "in_style": false,
+            "name": "busca_no_meio",
+            "rank": 18
+        },
+        "ACC": {
+            "caption": "item_inicial",
+            "editor": "DynamicValue",
+            "name": "item_inicial",
+            "optional": true,
+            "rank": 6,
+            "value": "custom_data_ABX"
+        },
+        "ACD": {
+            "caption": "verificar",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "verificar",
+            "optional": true,
+            "rank": 19,
+            "value": "text"
+        },
+        "ACE": {
+            "caption": "tipo_2",
+            "editor": "custom_type",
+            "name": "tipo_2",
+            "optional": true,
+            "rank": 26
+        },
+        "ACF": {
+            "caption": "fonte_2",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "fonte_2",
+            "optional": true,
+            "rank": 27,
+            "value": "custom_data_ACE"
+        },
+        "ACG": {
+            "caption": "tipo_3",
+            "editor": "custom_type",
+            "name": "tipo_3",
+            "optional": true,
+            "rank": 28
+        },
+        "ACH": {
+            "caption": "fonte_3",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "fonte_3",
+            "optional": true,
+            "rank": 29,
+            "value": "custom_data_ACG"
+        },
+        "ACI": {
+            "caption": "tipo_4",
+            "editor": "custom_type",
+            "name": "tipo_4",
+            "optional": true,
+            "rank": 30
+        },
+        "ACJ": {
+            "caption": "fonte_4",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "fonte_4",
+            "optional": true,
+            "rank": 31,
+            "value": "custom_data_ACI"
+        }
+    },
+    "icon": "ion-ios-list",
+    "property_applications": {
+        "resizable": true
+    },
+    "states": {
+        "ABN": {
+            "caption": "Itens Indexados",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "indexados",
+            "value": "number"
+        },
+        "ABV": {
+            "caption": "valor_selecionado",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "valor_selecionado",
+            "value": "text"
+        },
+        "ABb": {
+            "caption": "item_selecionado",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "item_selecionado",
+            "value": "custom_data_ABX"
+        },
+        "ABc": {
+            "caption": "id_selecionado",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "id_selecionado",
+            "value": "text"
+        },
+        "ABp": {
+            "caption": "termo_busca",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "termo_busca",
+            "value": "text"
+        }
+    }
+}

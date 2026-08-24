@@ -1,0 +1,21 @@
+{
+    "caption": "Definir seleção",
+    "fields": {
+        "ADo": {
+            "caption": "registro",
+            "editor": "DynamicValue",
+            "name": "registro",
+            "optional": true,
+            "rank": 0,
+            "value": "custom_data_element_ADG"
+        },
+        "ADp": {
+            "caption": "texto",
+            "editor": "DynamicValue",
+            "name": "texto",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        }
+    }
+}
